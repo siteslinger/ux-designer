@@ -94,6 +94,14 @@ body {
   background-color: black;
 }
 
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
 @media only screen and (max-width: 450px) {
   .nav-list {
     display: flex;

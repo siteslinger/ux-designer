@@ -106,7 +106,18 @@ body{
     color: white;
     background-color: $primary-color;
 }
-
+// .about-container{
+//     height: 100vh;
+// }
+// .contact-container{
+//     height: 100vh;
+// }
+.page {
+    display: none;
+  }
+  .page.active {
+    display: block;
+  }
 @media only screen and (max-width: 450px) {
     .nav-list {
         display: flex;
