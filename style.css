@@ -1,4 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap");
+.citizen-pr {
+  background-color: white;
+  color: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper a {
+  position: absolute;
+  top: 92%;
+  left: 27%;
+  font-size: 2rem;
+  color: rgb(61, 61, 61);
+}
+
+.citizen {
+  max-width: 100%;
+}
+
+.up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4%;
+}
+.up p {
+  padding: 8px 11px;
+  border-left: 4px solid #37352f;
+  font-family: "noto sans";
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: black;
+}
+
+.down {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4% 4% 0 4%;
+}
+.down p {
+  padding: 8px 11px;
+  border-left: 4px solid #37352f;
+  font-family: "noto sans";
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+}
+
+.points {
+  max-width: 100%;
+  padding: 0 12%;
+}
+.points .points-head {
+  font-family: "noto sans";
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  border-bottom: 3px solid #e4e2e0;
+  padding: 6px;
+}
+.points .sub-head {
+  margin-top: 90px;
+  font-family: "noto sans";
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+.points .text {
+  margin-top: 10px;
+  padding: 0 11px;
+  font-family: "noto sans";
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: black;
+}
+.points .border-side {
+  margin-top: 60px;
+  font-family: "noto sans";
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: black;
+  padding: 0 11px;
+  border-left: 4px solid #37352f;
+}
+
+.design {
+  margin-top: 70px;
+}
+.design h3 {
+  font-family: "noto sans";
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  border-bottom: 3px solid #e4e2e0;
+  padding: 6px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.design .text-design {
+  margin-top: 10px;
+  font-family: "noto sans";
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: black;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 450px) {
+  .wrapper a {
+    font-size: 0.8rem;
+  }
+}
 body {
   background-color: black;
   color: white;

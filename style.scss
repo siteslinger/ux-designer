@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap');
+@import './case-studies';
 @mixin font($size, $color, $weight, $family){
     font-family: $family;
     font-size: $size;
