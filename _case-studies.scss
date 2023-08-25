@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap');
+
+@mixin font($size, $color, $weight, $family){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+p{
+    margin-bottom: 0 !important;
+}
+.citizen-pr{
+    background-color: white;
+    color: black;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    a{
+        position: absolute;
+        top: 92%;
+        left: 27%;
+        font-size: 2rem;
+        color: rgb(61, 61, 61);
+    }
+}
+
+
+.citizen{
+    max-width: 100%;
+   
+}
+.up{
+    
+    padding: 6% 4% 2% 4%;
+    p{
+        padding: 8px 11px;
+        border-left: 4px solid #37352f;
+        @include font(1.5rem, black , 300 , 'noto sans' );
+        
+        
+    }
+}
+.down{
+  
+    padding: 0 4% 3% 4%;
+    p{
+        padding: 8px 11px;
+        border-left: 4px solid #37352f;
+        @include font(1.6rem, black , 500 , 'noto sans' )
+    }
+}
+    
+.points{
+    max-width: 100%;
+    padding:0 12% ;
+    .points-head{
+        @include font(2rem,black ,800 ,'noto sans' );
+        border-bottom: 3px solid #e4e2e0;
+        padding: 6px;
+       
+    }
+    .sub-head{
+        margin-top: 90px;
+        @include font(1.5rem, black , 600 , 'noto sans' )
+    }
+    .text{
+        margin-top: 10px;
+        padding:0 11px;
+        @include font(1.3rem, black , 300 ,'noto sans' )
+    }
+    .border-side{
+        margin-top: 60px;
+        @include font(1.8rem, black , 300 ,'noto sans' );
+        padding:0 11px;
+        border-left: 4px solid #37352f;
+    }
+}
+.design{
+    margin-top: 70px;
+    h3{
+        @include font(2rem,black ,800 ,'noto sans' );
+        border-bottom: 3px solid #e4e2e0;
+        padding: 6px;
+        text-transform: capitalize;
+        margin-bottom: 80px;
+    }
+
+}
+.text-design{
+     
+    @include font(1.3rem, black , 300 ,'noto sans' )
+}
+.thirt-text{
+    margin: 8% 0 4% 0;
+}
+.parent{
+ 
+    margin: 5% 0;
+    .head-block{
+        padding: 4% 8%;
+        background-color: #e9f4f9;
+        p{
+            @include font(1.3rem, black , 600 ,'noto sans' )
+        }
+    }
+    .points-li{
+        @include font(1.2rem, black ,400 ,'noto sans' );
+        padding: 8%;
+        p{
+            margin-bottom: 7%;
+        }
+    }
+}
+.one-line{
+    background-color: #e9f4f9;
+    margin: 1% 0;
+    padding: 4px 6px;
+    
+}
+.this{
+    @include font(1.1rem, black ,700 ,'noto sans' );
+   
+}
+.all-line{
+    background-color: #e9f4f9;
+    margin: 6% 0;
+    padding: 4px 6px;
+}
+.main-q{
+    margin-top: 10%;
+
+}
+.text-q{
+    @include font(1.2rem, black ,400 ,'noto sans' );
+    max-width: 500px;
+    margin-bottom: 10%;
+}
+.define{
+    margin-top: 60px;
+}
+.prototype{
+    margin-top: 20px;
+}
+.tasks{
+    @include font(1.4rem, black , 700 , 'noto sans' );
+    margin-top: 60px;
+}
+@media only screen and (max-width: 450px){
+    .parent{
+        grid-template-columns: 1fr;
+    }
+    .wrapper{
+        a{
+            font-size: 0.8rem;
+
+        }
+    }
+}
