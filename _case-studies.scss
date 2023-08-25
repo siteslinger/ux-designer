@@ -6,7 +6,9 @@
     font-weight: $weight;
     color: $color;
 }
-
+p{
+    margin-bottom: 0 !important;
+}
 .citizen-pr{
     background-color: white;
     color: black;
@@ -33,9 +35,8 @@
    
 }
 .up{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 4%;
+    
+    padding: 6% 4% 2% 4%;
     p{
         padding: 8px 11px;
         border-left: 4px solid #37352f;
@@ -45,9 +46,8 @@
     }
 }
 .down{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 4% 4% 0 4%;
+  
+    padding: 0 4% 3% 4%;
     p{
         padding: 8px 11px;
         border-left: 4px solid #37352f;
@@ -87,18 +87,73 @@
         border-bottom: 3px solid #e4e2e0;
         padding: 6px;
         text-transform: capitalize;
-        margin-bottom: 30px;
+        margin-bottom: 80px;
     }
-    .text-design{
-        margin-top: 10px;
-        @include font(1.3rem, black , 300 ,'noto sans' )
-    }
+
+}
+.text-design{
+     
+    @include font(1.3rem, black , 300 ,'noto sans' )
+}
+.thirt-text{
+    margin: 8% 0 4% 0;
 }
 .parent{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+ 
+    margin: 5% 0;
+    .head-block{
+        padding: 4% 8%;
+        background-color: #e9f4f9;
+        p{
+            @include font(1.3rem, black , 600 ,'noto sans' )
+        }
+    }
+    .points-li{
+        @include font(1.2rem, black ,400 ,'noto sans' );
+        padding: 8%;
+        p{
+            margin-bottom: 7%;
+        }
+    }
+}
+.one-line{
+    background-color: #e9f4f9;
+    margin: 1% 0;
+    padding: 4px 6px;
+    
+}
+.this{
+    @include font(1.1rem, black ,700 ,'noto sans' );
+   
+}
+.all-line{
+    background-color: #e9f4f9;
+    margin: 6% 0;
+    padding: 4px 6px;
+}
+.main-q{
+    margin-top: 10%;
+
+}
+.text-q{
+    @include font(1.2rem, black ,400 ,'noto sans' );
+    max-width: 500px;
+    margin-bottom: 10%;
+}
+.define{
+    margin-top: 60px;
+}
+.prototype{
+    margin-top: 20px;
+}
+.tasks{
+    @include font(1.4rem, black , 700 , 'noto sans' );
+    margin-top: 60px;
 }
 @media only screen and (max-width: 450px){
+    .parent{
+        grid-template-columns: 1fr;
+    }
     .wrapper{
         a{
             font-size: 0.8rem;

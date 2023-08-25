@@ -172,5 +172,5 @@ We took a slick, straightforward approach to the website's design, fully embraci
 minimalist 100k. In order to ensure that users could quickly navigate the website and get
 what they needed without difficulty, we wanted to get rid of any potential clutter or
 confusion. The jnain emphasis is on usability and functionality to provide a seamless and
-satisfying user experience. Of (nurse, we also wanted to make it visually appealing, so
+satisfying user experience. Ofcourse, we also wanted to make it visually appealing, so
 we gave it a fresh, contemporary style that feels warm and pleasing to the eye.
