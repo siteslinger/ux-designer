@@ -4,9 +4,44 @@ p {
   margin-bottom: 0 !important;
 }
 
+.toggle-btn {
+  border: none;
+  opacity: 0;
+  color: white;
+  background-color: transparent;
+}
+
+.top {
+  margin-top: 60px;
+}
+
 .citizen-pr {
   background-color: white;
   color: black;
+}
+
+.navbar {
+  display: flex;
+  max-width: 100%;
+  justify-content: end;
+  align-items: center;
+  padding: 1% 10% 0 0;
+  background-color: #000;
+  transition: background-color 0.3s;
+  min-height: 70px;
+}
+.navbar ul {
+  display: flex;
+  gap: 30px;
+}
+.navbar ul .nav-item {
+  list-style: none;
+}
+.navbar ul .nav-item a {
+  text-decoration: none;
+  color: #d31b1b;
+  text-transform: capitalize;
+  font-family: "noto sans";
 }
 
 .wrapper {
@@ -29,6 +64,8 @@ p {
 }
 
 .up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 6% 4% 2% 4%;
 }
 .up p {
@@ -41,6 +78,8 @@ p {
 }
 
 .down {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0 4% 3% 4%;
 }
 .down p {
@@ -186,12 +225,66 @@ p {
   margin-top: 60px;
 }
 
+.butons {
+  min-height: 300px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: 50px;
+}
+.butons p {
+  font-family: "noto sans";
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: black;
+  margin-top: 60px;
+}
+
+.foward {
+  background-color: #bfbfbf;
+  border-style: none;
+  padding: 20px 22px;
+  margin: 20px 0 0 20px;
+  border-radius: 50%;
+  position: relative;
+  top: 18px;
+}
+.foward a {
+  color: black;
+}
+
 @media only screen and (max-width: 450px) {
   .parent {
     grid-template-columns: 1fr;
   }
   .wrapper a {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
+  }
+  p {
+    font-size: 0.6rem !important;
+  }
+  h3 {
+    font-size: 1.2rem !important;
+  }
+  .points .sub-head {
+    margin-top: 42px;
+  }
+  .up, .down {
+    padding: 6% 0 2% 0;
+  }
+  .up p, .down p {
+    border-left: 2px solid #37352f;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .wrapper a {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.8rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
   }
 }
 body {
