@@ -35,7 +35,8 @@ p{
    
 }
 .up{
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 6% 4% 2% 4%;
     p{
         padding: 8px 11px;
@@ -46,7 +47,8 @@ p{
     }
 }
 .down{
-  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 4% 3% 4%;
     p{
         padding: 8px 11px;
@@ -159,5 +161,8 @@ p{
             font-size: 0.8rem;
 
         }
+    }
+    p{
+        font-size: 0.5rem !important;
     }
 }

@@ -29,6 +29,8 @@ p {
 }
 
 .up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 6% 4% 2% 4%;
 }
 .up p {
@@ -41,6 +43,8 @@ p {
 }
 
 .down {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0 4% 3% 4%;
 }
 .down p {
@@ -192,6 +196,9 @@ p {
   }
   .wrapper a {
     font-size: 0.8rem;
+  }
+  p {
+    font-size: 0.5rem !important;
   }
 }
 body {
