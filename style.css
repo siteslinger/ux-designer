@@ -286,6 +286,9 @@ p {
   h3 {
     font-size: 1.5rem !important;
   }
+  p {
+    font-size: 0.5rem !important;
+  }
 }
 body {
   background-color: black;
