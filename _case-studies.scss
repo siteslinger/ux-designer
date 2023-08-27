@@ -173,6 +173,11 @@ p{
     margin-top: 10%;
 
 }
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px
+}
 .text-q{
     @include font(1.2rem, black ,400 ,'noto sans' );
     max-width: 500px;
@@ -255,6 +260,9 @@ p{
         background-color: #fdebec;
        
     }
+}
+.disable{
+   display: none;
 }
 @media only screen and (max-width: 450px){
     .parent{
