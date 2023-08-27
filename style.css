@@ -253,6 +253,66 @@ p {
   color: black;
 }
 
+.emd {
+  display: flex;
+  justify-content: end;
+}
+
+.key {
+  padding: 8% 7%;
+}
+
+.use {
+  font-family: "noto sans";
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(75, 74, 74);
+  border-bottom: 3px solid #e4e2e0;
+  padding: 6px;
+  margin: 7% 0 4% 0;
+  text-transform: uppercase;
+}
+
+.click {
+  font-family: "noto sans";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #e9b761;
+  border-left: 4px solid #000000;
+  padding: 6px;
+  margin-bottom: 3%;
+}
+
+.heading {
+  font-family: "noto sans";
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 4% 0 2% 0;
+}
+
+.two {
+  font-family: "noto sans";
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2%;
+}
+
+.parent-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  margin: 5% 0;
+}
+.parent-2 p {
+  margin-top: 6%;
+}
+.parent-2 .head-block-2 {
+  padding: 4% 8%;
+  background-color: #fdebec;
+}
+
 @media only screen and (max-width: 450px) {
   .parent {
     grid-template-columns: 1fr;
@@ -285,9 +345,6 @@ p {
   }
   h3 {
     font-size: 1.5rem !important;
-  }
-  p {
-    font-size: 0.5rem !important;
   }
 }
 body {
