@@ -231,18 +231,17 @@ p {
   margin-top: 60px;
 }
 .home{
-  
+  display: flex;
 }
 .home-img{
   
 
 }
 .candy{
-  display: flex;
-  flex-wrap: nowrap;
+  
   width: 20vw;
   height: 50vh;
-  overflow-clip-margin:
+  
 }
 
 .butons {
@@ -457,6 +456,52 @@ body {
   font-family: "noto sans";
 }
 
+.link {
+  margin-right: 40px;
+}
+
+.parent-cn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 250px;
+}
+
+.flex-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-con a {
+  font-family: "noto sans";
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  padding: 0 10% 8% 10%;
+}
+.about-container img {
+  width: 300px;
+  height: 300px;
+}
+.about-container p {
+  font-family: "noto sans";
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  margin-top: 200px;
+}
+
+.contact-container {
+  padding: 8% 0;
+}
+
 .toggle-btn {
   border: none;
   opacity: 0;
@@ -472,7 +517,16 @@ body {
   display: block;
 }
 
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 450px) {
+  .about-container {
+    flex-direction: column;
+  }
   .nav-list {
     display: flex;
     flex-direction: column;
@@ -491,5 +545,9 @@ body {
   .navbar {
     margin-right: 0 !important;
     justify-content: space-between !important;
+  }
+  .parent-cn {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
