@@ -185,6 +185,20 @@ p {
   color: black;
   margin-top: 60px;
 }
+.home{
+  
+}
+.home-img{
+  
+
+}
+.candy{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 20vw;
+  height: 50vh;
+  overflow-clip-margin:
+}
 
 @media only screen and (max-width: 450px) {
   .parent {
@@ -256,8 +270,6 @@ body {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
 }
 .home-container .navbar {
   width: 100%;
