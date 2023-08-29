@@ -1,4 +1,4 @@
-$(".toggle-btn").click(()=>{
+/*$(".toggle-btn").click(()=>{
     $(".nav-item").slideToggle()
 })
 // JavaScript code with jQuery
@@ -40,3 +40,27 @@ $(document).ready(function() {
   // Show the initial page based on the current URL
   navigateTo(window.location.pathname);
 });
+
+*/
+
+// Wait for the DOM to be fully loaded
+// Add this script at the bottom of the <body> tag or use 'defer' attribute in the script tag
+
+const container = document.querySelector('.container');
+const caseEntry = document.querySelector('.caseEntry');
+
+function animateCaseEntryOnScroll() {
+  const containerOffset = 15; // Offset in pixels
+  const containerBottom = container.getBoundingClientRect().bottom - containerOffset;
+  const viewportHeight = window.innerHeight;
+
+  if (containerBottom < viewportHeight) {
+    caseEntry.style.opacity = '1';
+    caseEntry.style.transform = 'translateY(0)';
+    caseEntry.classList.remove('hidden');
+    window.removeEventListener('scroll', animateCaseEntryOnScroll);
+  }
+}
+
+window.addEventListener('scroll', animateCaseEntryOnScroll);
+
