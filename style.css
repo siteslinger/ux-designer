@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans&family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&family=Noto+Sans&family=Poppins:wght@200&display=swap');
 p {
   margin-bottom: 0 !important;
 }
@@ -233,10 +234,7 @@ p {
 .home{
   display: flex;
 }
-.home-img{
-  
 
-}
 .candy{
   
   width: 20vw;
@@ -431,8 +429,77 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  flex-direction: column;
+ 
 }
+/* this is home page individual image animation's css*/
+.home-ani{
+ 
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content-case{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15%;
+}
+.background-1{
+  background-image: url('./assets/pexels-luca-nardone-3651597.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.background-2{
+  background-image: url('./assets/Background\ image.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-3{
+  background-image: url('./assets/pexels-luca-nardone-3651597\ \(1\).png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.replace-candy-1,
+.replace-candy-2,
+.replace-candy-3{
+  display: none;
+}
+/* this is home page individual image animation's css*/
+
+.name-study{
+ 
+  font-family: 'Lato';
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.name-study span{
+  opacity: 0.5;
+}
+.sec-name{
+ 
+  font-family: 'Lato';
+  font-size: 1rem;
+}
+/* sub element's css */
 .home-container .navbar {
   width: 100%;
   display: flex;
