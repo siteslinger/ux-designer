@@ -7,10 +7,7 @@ $(document).ready(function() {
       e.preventDefault();
       
       let href = $(this).attr("href").substring(1); // Removing the '#' from the href
-
-      // Hide all content sections
       $("#home-content, #about-content, #contact-content").hide();
-
       // Update browser history
       history.pushState({}, "", href);
 
@@ -18,12 +15,18 @@ $(document).ready(function() {
       switch(href) {
           case '/':
               $(".home-ani").show();
+              $('.parent-home'),hide()
+              $('.about-container').hide()
+              $('.contact-container').hide()
               break;
           case '/about':
               $(".about-container").show();
+              $('.home-ani').hide()
               break;
           case '/contact':
               $(".contact-container").show();
+              $('.home-ani').hide();
+              $('.about-container').hide()
               break;
           default:
               $(".home-ani").show();
@@ -41,8 +44,6 @@ $(document).ready(function() {
       });
   });
 });
-
-
 
 
 
@@ -72,21 +73,22 @@ $(document).ready(function() {
 
   $('#candy-1').click(function(){
 
-    // Define a common duration for the animations.
     var duration = 1000;
 
-    // Start the move and fadeOut animations simultaneously.
     $('#candy-1').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
     $('#candy-2').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
     $('#candy-3').animate({right: '-30%', top: '-200px', opacity: 0}, duration);
 
-    // Once all animations are done, fadeIn the replace-candy-1.
+  
     $('#candy-1, #candy-2, #candy-3').promise().done(function() {
-      // Make sure the candies are hidden after animation.
+      
       $(this).hide();
       homeSection.fadeOut(duration)
       $('.replace-candy-1').fadeIn(200);
+      
     });
+   
+
 });
 
   $('#candy-2').click(function(){
@@ -107,3 +109,15 @@ $(document).ready(function() {
     $('.replace-candy-3').show();
   });
 });
+
+
+
+const candiesHide = document.querySelectorAll('.home-ani, .home_img');
+
+const btnHome = document.querySelector('#nav-home');
+
+btnHome.onClick = function(){
+  candiesHide.style.opacity = "1 !important";
+  candiesHide.style.display = "block !important"
+}
+
