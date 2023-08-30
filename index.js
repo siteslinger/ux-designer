@@ -1,46 +1,46 @@
-// $(".toggle-btn").click(()=>{
-//     $(".nav-item").slideToggle()
-// })
-// // JavaScript code with jQuery
-// $(document).ready(function() {
-//   const navLinks = $('.nav-link');
-//   const pages = $('.page');
-//   const backButton = $('#back-button');
+$(".toggle-btn").click(()=>{
+    $(".nav-item").slideToggle()
+})
 
-//   // Hide all pages except the active one
-//   function showPage(pageId) {
-//     pages.removeClass('active');
-//     $('#' + pageId).addClass('active');
-//   }
+$(document).ready(function() {
+  $(".nav-link").on("click", function(e) {
+      e.preventDefault();
+      
+      let href = $(this).attr("href").substring(1); // Removing the '#' from the href
 
-//   // Update the URL and show the corresponding page
-//   function navigateTo(url) {
-//     const pageId = url === '/' ? 'home' : url.substr(1);
-//     history.pushState(null, null, url);
-//     showPage(pageId);
-//   }
+      // Hide all content sections
+      $("#home-content, #about-content, #contact-content").hide();
 
-//   // Handle navigation when a link is clicked
-//   navLinks.click(function(event) {
-//     event.preventDefault();
-//     const href = $(this).attr('href');
-//     navigateTo(href);
-//   });
+      // Update browser history
+      history.pushState({}, "", href);
 
-//   // Handle navigation when the "Previous" button is clicked
-//   backButton.click(function() {
-//     history.back();
-//   });
+      // Show the appropriate content
+      switch(href) {
+          case '/':
+              $(".home-ani").show();
+              break;
+          case '/about':
+              $(".about-container").show();
+              break;
+          case '/contact':
+              $(".contact-container").show();
+              break;
+          default:
+              $(".home-ani").show();
+      }
+  });
 
-//   // Handle navigation when the back/forward buttons are used
-//   $(window).on('popstate', function() {
-//     navigateTo(window.location.pathname);
-//   });
-
-//   // Show the initial page based on the current URL
-//   navigateTo(window.location.pathname);
-// });
-
+  // Handle browser back and forward buttons
+  $(window).on('popstate', function() {
+      let currentPath = location.pathname;
+      
+      $(".nav-link").each(function() {
+          if ($(this).attr("href").substring(1) === currentPath) {
+              $(this).click();
+          }
+      });
+  });
+});
 
 
 
@@ -54,14 +54,16 @@ $(window).scroll(function() {
     const restSection = $('#content');
     const introSection = $('.first-main');
     restSection.show().animate({
-      top: 0,
+      top: '20px',
     }, 1000);
     $('body').css('overflow', 'auto')
     introSection.fadeOut(1000);
 
     animationStarted = true; 
   }
+
 });
+
 
 
 $(document).ready(function() {
