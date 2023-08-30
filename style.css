@@ -233,10 +233,7 @@ p {
 .home{
   display: flex;
 }
-.home-img{
-  
 
-}
 .candy{
   
   width: 20vw;
@@ -373,6 +370,7 @@ p {
 body {
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 
 * {
@@ -431,7 +429,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  flex-direction: column;
+  
 }
 .home-container .navbar {
   width: 100%;
