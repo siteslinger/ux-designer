@@ -482,7 +482,10 @@ body {
   display: none;
 }
 /* this is home page individual image animation's css*/
-
+#content{
+  position: relative;
+  top: 90vh;
+}
 .name-study{
  
   font-family: 'Lato';
