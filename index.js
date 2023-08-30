@@ -105,3 +105,20 @@ $(document).ready(function() {
     $('.replace-candy-3').show();
   });
 });
+
+$(".btn-right-1").click(function(){
+  $(".replace-candy-2").hide();
+  $(".replace-candy-1").show();
+})
+$(".btn-left-2").click(function(){
+  $(".replace-candy-1").hide();
+  $(".replace-candy-2").show();
+})
+$(".btn-right-2").click(function(){
+  $(".replace-candy-1").hide();
+  $(".replace-candy-3").show();
+})
+$(".btn-left-3").click(function(){
+  $(".replace-candy-3").hide();
+  $(".replace-candy-1").show();
+})

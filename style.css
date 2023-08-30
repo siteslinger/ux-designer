@@ -652,3 +652,46 @@ body {
     gap: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+.btns-bottom{
+  display: flex;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
+.btn-candy-left{
+  margin: 0 4%;
+}
+.btn-candy-left:hover{
+  cursor: pointer;
+}
+.btn-left{
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  background-color: gray;
+}
+.btn-left img{
+  width: 12px;
+}
+.hide-left-btn{
+  display:none;
+}
+.btn-candy-right{
+  margin: 0 4%;
+}
+.btn-candy-right:hover{
+  cursor: pointer;
+}
+.btn-right{
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  background-color: gray;
+}
+.btn-right img{
+  width: 12px;
+}
+.hide-right-btn{
+  display:none;
+}
