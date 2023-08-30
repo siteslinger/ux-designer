@@ -41,18 +41,51 @@
 //   navigateTo(window.location.pathname);
 // });
 
+
+
+
+
+
+let animationStarted = false;
+
+$(window).scroll(function() {
+  
+  if (!animationStarted) {
+    const restSection = $('#content');
+    const introSection = $('.first-main');
+    restSection.show().animate({
+      top: 0,
+    }, 1000);
+    $('body').css('overflow', 'auto')
+    introSection.fadeOut(1000);
+
+    animationStarted = true; 
+  }
+});
+
+
 $(document).ready(function() {
   const homeSection = $('.home-ani');
   const homeContainer = $('.first-main');
 
   $('#candy-1').click(function(){
-    // Hide the home section and home container
-    homeSection.hide();
-    homeContainer.hide();
 
-    // Show the replacement section for candy-1
-    $('.replace-candy-1').show();
-  });
+    // Define a common duration for the animations.
+    var duration = 1000;
+
+    // Start the move and fadeOut animations simultaneously.
+    $('#candy-1').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-2').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-3').animate({right: '-30%', top: '-200px', opacity: 0}, duration);
+
+    // Once all animations are done, fadeIn the replace-candy-1.
+    $('#candy-1, #candy-2, #candy-3').promise().done(function() {
+      // Make sure the candies are hidden after animation.
+      $(this).hide();
+      homeSection.fadeOut(duration)
+      $('.replace-candy-1').fadeIn(200);
+    });
+});
 
   $('#candy-2').click(function(){
     // Hide the home section and home container
