@@ -47,6 +47,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* position: absolute;
+  z-index: -1;
+  top: 100px;
+  overflow: hidden; */
 }
 .background-3{
   background-image: url('./assets/pexels-luca-nardone-3651597\ \(1\).png');
@@ -107,7 +111,7 @@ p {
   max-width: 100%;
   justify-content: end;
   align-items: center;
-  background-color: #000;
+ 
   transition: background-color 0.3s;
   min-height: 70px;
 }
@@ -546,7 +550,7 @@ body {
 .home-container .navbar ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   gap: 30px;
 }
 .home-container .navbar ul .nav-item {
@@ -602,7 +606,7 @@ body {
 }
 
 .contact-container {
-  padding: 8% 0;
+  padding: 8% 8% 8% 0;
 }
 
 .toggle-btn {
@@ -629,11 +633,34 @@ body {
 @media only screen and (max-width: 450px) {
   .about-container {
     flex-direction: column;
+    margin-top: 50px;
+    padding: 0 7%;
+    overflow: hidden;
+  }
+  .about-container p{
+    margin-top: 50px;
+    
+  }
+  .home-container .navbar{
+    padding: 0 7% 0 3%;
+  }
+  .home-ani{
+    padding: 5% 3%;
+  }
+  .name-study {
+    font-size: 1.3rem;
+  }
+  .content-case{
+    gap: 30px;
+    padding: 5%;
+  }
+  .home_img{
+    gap: 10px;
   }
   .nav-list {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align items to the start (top) of the column */
+    align-items: start; 
     gap: 10px; /* Add some spacing between items */
     padding-left: 0; /* Remove default padding from list */
   }
@@ -646,7 +673,7 @@ body {
     justify-content: flex-end;
   }
   .navbar {
-    margin-right: 0 !important;
+   overflow-x: hidden;
     justify-content: space-between !important;
   }
   .parent-cn {
@@ -669,7 +696,7 @@ body {
 }
 .btn-left{
   border-radius: 50%;
-  padding: 10px;
+  padding: 20px 24px;
   border: none;
   background-color: gray;
 }
@@ -687,7 +714,7 @@ body {
 }
 .btn-right{
   border-radius: 50%;
-  padding: 10px;
+  padding: 20px 24px;
   border: none;
   background-color: gray;
 }
