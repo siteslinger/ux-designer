@@ -15,15 +15,24 @@ $(document).ready(function() {
       switch(href) {
           case '/':
               $(".home-ani").show();
-              $('.parent-home'),hide()
+              $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide()
               $('.about-container').hide()
               $('.contact-container').hide()
+              $('#candy-1, #candy-2, #candy-3').css({
+                opacity: '1',
+                display: 'block',
+                left : 0,
+                top: 0
+            });
               break;
           case '/about':
+            $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide()
+            $('.contact-container').hide()
               $(".about-container").show();
               $('.home-ani').hide()
               break;
           case '/contact':
+            $('.replace-candy-1, .replace-candy-2, .replace-candy-3').hide()
               $(".contact-container").show();
               $('.home-ani').hide();
               $('.about-container').hide()
@@ -33,16 +42,24 @@ $(document).ready(function() {
       }
   });
 
-  // Handle browser back and forward buttons
-  $(window).on('popstate', function() {
-      let currentPath = location.pathname;
-      
-      $(".nav-link").each(function() {
-          if ($(this).attr("href").substring(1) === currentPath) {
-              $(this).click();
-          }
-      });
-  });
+
+    // Handle browser back and forward buttons
+    $(window).on('popstate', function() {
+        let currentPath = location.pathname;
+        
+        $(".nav-link").each(function() {
+            if ($(this).attr("href").substring(1) === currentPath) {
+                $(this).click();
+            }
+        });
+    });
+
+    // Handle "previous page" button in your navbar
+    $('.nav-item a[href="#/back"]').click(function(e) {
+        e.preventDefault();  // Prevent the default action (useful if the href is "#")
+        window.history.back();
+    });
+
 });
 
 
@@ -84,7 +101,7 @@ $(document).ready(function() {
       
       $(this).hide();
       homeSection.fadeOut(duration)
-      $('.replace-candy-1').fadeIn(200);
+      $('.replace-candy-1').show();
       
     });
    
@@ -92,21 +109,37 @@ $(document).ready(function() {
 });
 
   $('#candy-2').click(function(){
-    // Hide the home section and home container
-    homeSection.hide();
-    homeContainer.hide();
+    var duration = 1000;
 
-    // Show the replacement section for candy-2
-    $('.replace-candy-2').show();
+    $('#candy-1').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-2').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-3').animate({right: '-30%', top: '-200px', opacity: 0}, duration);
+
+  
+    $('#candy-1, #candy-2, #candy-3').promise().done(function() {
+      
+      $(this).hide();
+      homeSection.fadeOut(duration)
+      $('.replace-candy-2').show();
+      
+    });
   });
 
   $('#candy-3').click(function(){
-    // Hide the home section and home container
-    homeSection.hide();
-    homeContainer.hide();
+    var duration = 1000;
 
-    // Show the replacement section for candy-3
-    $('.replace-candy-3').show();
+    $('#candy-1').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-2').animate({left: '-10%', top: '-200px', opacity: 0}, duration);
+    $('#candy-3').animate({right: '-30%', top: '-200px', opacity: 0}, duration);
+
+  
+    $('#candy-1, #candy-2, #candy-3').promise().done(function() {
+      
+      $(this).hide();
+      homeSection.fadeOut(duration)
+      $('.replace-candy-3').show();
+      
+    });
   });
 });
 
@@ -126,15 +159,4 @@ $(".btn-left-3").click(function(){
   $(".replace-candy-3").hide();
   $(".replace-candy-1").show();
 })
-
-
-
-// const candiesHide = document.querySelectorAll('.home-ani, .home_img');
-
-// const btnHome = document.querySelector('#nav-home');
-
-// btnHome.onClick = function(){
-//   candiesHide.style.opacity = "1 !important";
-//   candiesHide.style.display = "block !important"
-// }
 
