@@ -1,7 +1,22 @@
 $(".toggle-btn").click(()=>{
     $(".nav-item").slideToggle()
 })
-
+$(".nav-link").click(function() {
+  if ($(window).width() <= 768) {  // Check if it's a mobile screen, adjust the value as per your requirement
+      $(".nav-item").slideUp();
+  }
+});
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 50) {  // Adjust the value based on when you want the color to change
+      $('.inside-nav').css({
+          backgroundColor: "#fff"
+      });
+  } else {
+      $('.inside-nav').css({
+          backgroundColor: "#000"  // Black color when scrolled to the top or original position
+      });
+  }
+});
 $(document).ready(function() {
   $(".nav-link").on("click", function(e) {
       e.preventDefault();

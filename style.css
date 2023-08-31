@@ -493,6 +493,7 @@ body {
   min-height: 120vh;
   padding: 2%;
   margin: auto;
+  
 }
 .container-main .head {
   display: flex;
@@ -613,7 +614,7 @@ body {
   border: none;
   opacity: 0;
   color: white;
-  background-color: black;
+  background-color: transparent;
 }
 
 .page {
@@ -629,6 +630,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+.inside-nav{
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-right: 9%;
+}
 
 @media only screen and (max-width: 450px) {
   .about-container {
@@ -638,7 +647,7 @@ body {
     overflow: hidden;
   }
   .about-container p{
-    margin-top: 50px;
+    margin: 50px 0 50px 0;
     
   }
   .home-container .navbar{
@@ -679,6 +688,9 @@ body {
   .parent-cn {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .container-main{
+    margin-top: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
 
