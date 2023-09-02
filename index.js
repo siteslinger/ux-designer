@@ -135,7 +135,10 @@ $(document).ready(function() {
       
       $(this).hide();
       homeSection.fadeOut(duration)
-      $('.replace-candy-2').show();
+      $('.replace-candy-2').css({
+        display: 'block',
+        top: 0
+      })
       
     });
   });
@@ -153,25 +156,61 @@ $(document).ready(function() {
       $(this).hide();
       homeSection.fadeOut(duration)
       $('.replace-candy-3').show();
+    
       
     });
   });
 });
+function reverseAnimation() {
+  var $innerDiv = $('.replace-candy-2');
+  var $innerImage = $('.images-upper');
 
-$(".btn-right-1").click(function(){
-  $(".replace-candy-1").hide();
-  $(".replace-candy-2").show();
-})
+  $innerDiv.animate({ top: '100%' }, 2000, function() {
+      $innerDiv.css('display', 'none');
+  });
+
+  $innerImage.animate({ top: '100%' }, 2000, function() {
+      $innerImage.css('display', 'none');
+  })}
+$("#next").click(function(){
+  var $innerDiv = $('.replace-candy-2');
+  var $innerImage = $('.images-upper');
+
+  // Show both elements and reset their top property for the animation
+  $innerDiv.css({ display: 'block', top: '100%' }); 
+  $innerImage.css({ display: 'block', top: '100%' }); 
+  $('.upper-img').hide();
+
+  // Animation to move the divs to top
+  $innerDiv.animate({ top: 0 }, 2000);
+ 
+  $innerImage.animate({ top: 0 }, 2000, function() {
+
+      // Auto reverse animation after 2 seconds
+      setTimeout(function() {
+          reverseAnimation();
+      }, 2000);
+
+  });
+});
+
+
+
 $(".btn-left-2").click(function(){
-  $(".replace-candy-2").hide();
-  $(".replace-candy-1").show();
+    $('.replace-candy-2').hide()
+  $('.replace-candy-1').show()
 })
 $(".btn-right-2").click(function(){
   $(".replace-candy-2").hide();
+  $('.replace-candy-1').hide()
   $(".replace-candy-3").show();
 })
 $(".btn-left-3").click(function(){
   $(".replace-candy-3").hide();
-  $(".replace-candy-2").show();
+  $('.upper-img').show()
+  $('.replace-candy-2').css({
+    display: 'block',
+    top: 0
+  })
 })
 
