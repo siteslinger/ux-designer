@@ -207,10 +207,11 @@ $(".btn-right-2").click(function(){
 })
 $(".btn-left-3").click(function(){
   $(".replace-candy-3").hide();
-  $('.upper-img').show()
   $('.replace-candy-2').css({
     display: 'block',
     top: 0
   })
+  $('.upper-img').show()
+ 
 })
 
